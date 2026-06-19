@@ -167,9 +167,9 @@ if st.sidebar.button("Predict Churn Risk"):
 
     probability = model.predict_proba(input_row)[0, 1]
 
-    if probability >= 0.60:
+    if probability >= 0.55:
         risk = "🔴 High Risk"
-    elif probability >= 0.30:
+    elif probability >= 0.25:
         risk = "🟡 Medium Risk"
     else:
         risk = "🟢 Low Risk"
